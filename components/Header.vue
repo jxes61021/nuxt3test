@@ -1,0 +1,173 @@
+<template lang="pug">
+div(
+  :class="$tw([\
+    'relative',\
+  ])"
+)
+  div(
+    :class="$tw([\
+      'absolute',\
+      'w-full',\
+      'z-10',\
+      'flex',\
+      'justify-between',\
+      'items-start',\
+      'top-0',\
+    ])"
+  )
+    div(
+      :class="$tw([\
+        'w-[80px]',\
+        'md:w-[99px]',\
+        'cursor-pointer',\
+      ])"
+    )
+      a
+        img(src="../assets/img/i_gpglogo.jpg")
+    div(
+      :class="$tw([\
+        'mr-[16px]',\
+        'md:mr-[44px]',\
+        'mt-[20px]',\
+        'md:mt-[24px]',\
+        'flex',\
+      ])"
+    )
+      a(
+        :class="$tw([\
+          'block',\
+          'w-[40px]',\
+          'md:w-[50px]',\
+          'ml-[10px]',\
+          'md:ml-[16px]',\
+          'cursor-pointer',\
+        ])"
+        href="/"
+        target="_blank"
+      )
+        img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABHNCSVQICAgIfAhkiAAAAjNJREFUaEPtmtFtwjAQhmvBe6kEz+0GpRM0bNAN2hHaSdoR6AbdoGECkg36iARS6TtS+l+UIOMGsJ075FBbQqD4bO67s32Oz+qioQyHw6Qoikel1BjV9AmhZNApg07vq9UqNRVS+oPRaDSG8CueJSFofkCHFEAvy+Uyq2W2IBXEJyoGgUPU6q0BM6lhSpAOQvyBKUEwJ8gToQ+nfQMlxZyZKJrYkCCQLpeJwrCa0grVZQpaycgj84CWWF97ZgRS+LYOqV0ECckbpEv0yH/zyA+WxjLQYolP8XUpZQDJoZX3+/2HxWLxpW2DPvD7WgJGCiTfbDbJGkVXeoACOPLMLTeMBEgjRK24FAw3yEEISRhOECsIKRguECcICRgOEC8Ibpi2IK0gOGHagLBAcMH4grBCcMD4gIhAtIVxBkHEvjIjNneUroLmt0u/ziA4sdg51HP5MxdZ1zfXCHLMutrx61aUTjtwMjg91pbqg/EIFKFd7r2h9AxDM4kgBywgNkeiRyqrxzliMwFJxjaOxKF1qqGFWHCnp7yaPElbjF6vN4fsjVlv094n1eG8alWKUe5u54TEUPhYrKAYs69Q6s85AesLYjulTiYXQU5mass/OiuP0MRlP8K0NCSXWH5WyVBaKrufnibf7tlOcLldup/yHUe/wkFBSiwRI0RTJpJop2FequkSzBaCjNR0zekNz81XVCGDenc7gyeeG6856V3Spg2CT8j70Z4nlKU5h050+WzadPHsF1BnZOW5+ULLAAAAAElFTkSuQmCC")
+      a(
+        :class="$tw([\
+          'block',\
+          'w-[40px]',\
+          'md:w-[50px]',\
+          'ml-[10px]',\
+          'md:ml-[16px]',\
+          'cursor-pointer',\
+        ])"
+        href="https://line.me/ti/p/@gpg.game"
+        target="_blank"
+      )
+        img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABHNCSVQICAgIfAhkiAAABEZJREFUaEPdWlFSIjEQ3Sn9F0up4m/ZE6gnEE6w7gmWPYF6gsUTiCcQT7B6gh1OIJ5A+KMKqIJvsNj3ppKpEDKTTGbAYVNlITNJp19353UnIfhiaKenp43VavUzCIJzvOZfGVofOvWh09NkMgl1hQL1QbVaPUfnezxrlEHzFB1CALodj8d92ScGIkD8xYtKyUFI9WYA05RgIiB7CGIDTAQEa4KeKHs4JQVKiDXTDLiw0YNA9rk1A4RVlwy1zyjIZPTIa8EUO4TgEMYZ0Dj4P/rE97r4rOAZo+CsQOP1CWRVgMAelOseHByEo9EoUtzWarVa/ePjg/nqCn2/2/rb3ucCQpdC+bar8knKCFBtAerIprTpvS+QN4BoqQnJZ3J9DAEtl8tnn7DzAXIHumsXoXiSDIQ75f/OMkcmIPDCL3ihm2UC375g0xZC7dF1vDOQXYKQymcB4wrkBeFEdtl5Ozk56cCI17aJXYDMsQDrMzSbsG28r6AdHh6yyv2aJt8K5DNCSlcYXrmCHn/yAEn0BpjlEuHW04Wzkl4sFgN6kHTK92qeERY+k2MpR5UB6w9NeQn9GBGJOSbVI0x4YKmWriyE3uAZN2BNdbcmtgOvchws+Y7/KwjNbzI0FWptYjx3n5SjthlkHhu8krpWUoGA/n5Mp1MmqLWmKqMCUSrpHp43lPInKrUpRAPSwCPmiyH+BmIS9m0b5mTfxCrdtkbWLC6FewDh0Fso2EkAYk2y0ts6QPk9FQhC4tjEVh5A5pjwCGF2IeopeoEeijzCSllWyfhOj9yZFE4rcFOBQODa4YSvRxiiZB1R2r+IvBAD0ZSeY17juYE3EFrNdPSS1SM0iCGxxUBIDgDZJSCw1sDEWqKgfPcKraIWO4EI2g2hiNxQqR6xrhHbltyXfskqa9WpYlUyyxpryRAVC5ZgmA+SQitmONX6tlLFxlpJnM5My1yithDk0BHlRIcMxcnZARQe9xWFYAv9WtghVuD1qI9sPE1U+8vnIifVvUKLg8pQorhUwTaP8NBgAMtdfFbRSGPavBEZ3PHwwboYk1ye9zlAPHJbbZPjCuRTQswlpCRAZyAckETHNmv5vM96Hp0JiFj8N6iIH3yUcx2TFUSWNaLr8Az6vM17nmUCliWc1PGZPaJN3kbueCiK0QDiWs8rrl7MCySaR9RJz0hkL64Tq/1YvuDE8t6FnbwToodiPCjgITYz9JNtvFgPPL/KdVdZiEdSlE09RhKh1Mb43Nd92wYSFY86UFGS0wsb72we3GVoqXNteKRILxTJWjYDxqXNtq++txpaZDNeAOGzlYeRbNaSCZEsU+Q1mMu8Rfd5+68uQ8kc+389TR9jTxLiY+0Mtmjfb1FeRPHqTzgIxusicotK2kTPedXNu0z9RzX7BCYGEbGWCllwPU81yh5mvNfnvmjzZ04qIB6GkffB/yzkykLNvBLnj8+6ptPPfzf0rfTqb5JsAAAAAElFTkSuQmCC")
+      a(
+        :class="$tw([\
+          'block',\
+          'w-[40px]',\
+          'md:w-[50px]',\
+          'ml-[10px]',\
+          'md:ml-[16px]',\
+          'cursor-pointer',\
+        ])"
+        href="https://www.facebook.com/GodPlayGameFun"
+        target="_blank"
+      )
+        img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABHNCSVQICAgIfAhkiAAAAi9JREFUaEPtWjtOAzEQxUkPBflcIjlBkOAEoSVI1CDRQ5EaJA6AxAlIWlJQQ5ETLJfIhwL6JLxZstFmtbtej2yvV7KlbfxJ/Oa9Gf9GHKSUVqvV22w2A3wdNHfT+pRQFwghvvCN5vP5NPn/Il7Rbre7q9XqAXW9Eiaq8pfTer0+nM1mQTRoB4RArNfrN7BwpPKLZfUFMz+1Wu08AhMCqRqIHQsxMCGQRqMxqYCcssifLpfLviDHhqQISGULJNYXzWbzGX5xUVkUmDj8ZSwgqw+HQizXngEB+eaOdmmcNSC0mEHCI+g5SFvQIqNwfdY4EAD4xSRvF4vFexEGnQRCICiixFdgGRhXgVwVZcJZaZFPAMSpjIFku4uMDLHivlQeCHanZyq+4ay0wMZxHhu6N6rGwq8MCLZG91hX7lSll9XfA5FZ0jMis1BGu5dW0jAyKRU1NHbjN+hLFyBKRRsjuoBwo5mLQB4Rlq+V6KBToq6DlS5GuBchHohBZ2cdvV1kpFwgYGjvYpkuzfIcFr4wQDt9ycK6d9bGiKrUuGHWbxpV43nUXxaOPSN+08jUlpcW03A+/MoM56Uls5CPWkwLWZcWVtjPbYYDc8rpw2wCCTMiTD2GWgYyNvY8bRNI+DxNwuCek/O0aBHIf8IATWZ7Mz6BrxzqchQbQOJPe8mkGm1gTANJvk8aS3MyDCQ7zSkuqW3i2SXqOtzQjHFPeTKFRU/QXvh8TiEW/Snx7DXtnf4PZYzDUjuI5sgAAAAASUVORK5CYII=")
+  div(
+    :class="$tw([\
+      'relative',\
+      'w-full',\
+      'h-screen',\
+      'md:h-[1080px]',\
+    ])"
+    style="backgroundImage: url('../assets/img/m2_bg_sp101.png'); background-repeat: repeat-x; background-position: 0px bottom; background-size: 130px;"
+  )
+    div(
+      :class="$tw([\
+        'overflow-hidden',\
+        'w-full',\
+        'h-full',\
+        'relative',\
+        'pointer-events-none',\
+      ])"
+    )
+      video(
+        :class="$tw([\
+          'absolute',\
+          'h-full',\
+          'w-full',\
+          'top-1/2',\
+          'left-1/2',\
+          '-translate-1/2',\
+          'object-cover',\
+        ])"
+        src="../assets/video/f_101_2.mp4"
+        preload="auto"
+        loop
+        autoplay
+        playsinline
+      )
+    div(
+      :class="$tw([\
+        '-bottom-1',\
+        'absolute',\
+        'w-full',\
+        'h-24',\
+      ])"
+      style="backgroundImage: url('../assets/img/m2_bg_sp101.png'); background-repeat: repeat-x; background-position: 0px bottom; background-size: 130px;"
+    )
+    div(
+      :class="$tw([\
+        'flex',\
+        'flex-col',\
+        'justify-center',\
+        'items-center',\
+      ])"
+    )
+      a(
+        :class="$tw([\
+          'cursor-pointer',\
+          'mt-[10px]',\
+          'w-[300px]',\
+          'md:w-[418px]',\
+          'transition',\
+          'duration-300',\
+          'hover:scale-110',\
+          'bottom-1/4',\
+          'absolute',\
+        ])"
+      )
+        img(
+          :class="$tw([\
+            'animate-button',\
+          ])"
+          src="../assets/img/m2_btn.png"
+        )
+      div(
+        :class="$tw([\
+          'w-full',\
+          'md:max-w-[1024px]',\
+          'mx-auto',\
+          'md:mb-[-280px]',\
+          'overflow-hidden',\
+          'md:overflow-visible',\
+        ])"
+      )
+</template>
+<script>
+import { ref, onMounted } from 'vue'
+import useStore from '@/store'
+export default {
+  setup() {
+    const store = useStore()
+    const { $_ } = useNuxtApp()
+    onMounted(() => {
+      const video = document.querySelector('video');
+      // console.log('video', video)
+      // video.play()
+    })
+    
+    return{
+    }
+  }
+}
+</script>

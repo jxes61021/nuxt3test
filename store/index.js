@@ -13,7 +13,6 @@ const useStore = defineStore("main", {
     },
     setWidth(val) {
       this.width = val
-      // console.log('this.width', this.width)
     },
   },
   getters: {

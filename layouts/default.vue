@@ -1,6 +1,6 @@
 <template lang="pug">
 div
-  //- Header
+  Header
   slot
   Pet
   Footer
@@ -8,10 +8,12 @@ div
 <script>
 import { ref } from 'vue'
 import { tw } from 'twind/shim'
+import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 import Pet from '@/components/Pet.vue'
 export default {
   components: {
+    Header,
     Footer,
     Pet
   },

@@ -1,6 +1,6 @@
 <template lang="pug">
 div(
-  :class="tw([\
+  :class="$tw([\
     'w-full',\
     'h-screen',\
     'min-h-[100vh]',\
@@ -12,17 +12,32 @@ div(
   ])"
   )
   p(
-    :class="tw([\
+    :class="$tw([\
       'text-5xl',\
   ])") index page
+  //- video(
+  //-   @waiting="waiting"
+  //-   loop
+  //-   autoplay
+  //-   playsinline
+  //-   poster
+  //-   :class="$tw([\
+  //-     'h-full',\
+  //-     'w-full',\
+  //-     'object-cover',\
+  //-   ])"
+  //- )
+  //-   source(src="../assets/video/f_101_2.mp4" type="video/mp4")
 </template>
 <script>
 import { ref } from 'vue'
-import { tw } from 'twind/shim'
 export default {
   setup() {
+    const waiting = () => {
+      console.log('waiting')
+    }
     return{
-      tw,
+      waiting
     }
   }
 }
