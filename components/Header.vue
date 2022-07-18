@@ -100,7 +100,7 @@ div(
           '-translate-1/2',\
           'object-cover',\
         ])"
-        src="../assets/video/f_101_2.mp4"
+        :src="isMobile ? '../assets/video/f_101_mo.mp4' : '../assets/video/f_101_pc.mp4'"
         preload="auto"
         loop
         autoplay
@@ -160,6 +160,7 @@ export default {
   setup() {
     const store = useStore()
     const { $_ } = useNuxtApp()
+    const isMobile = computed(() => store.isMobile)
     onMounted(() => {
       const video = document.querySelector('video');
       // console.log('video', video)
@@ -167,6 +168,7 @@ export default {
     })
     
     return{
+      isMobile
     }
   }
 }
