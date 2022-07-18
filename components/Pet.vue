@@ -62,7 +62,6 @@ export default {
   setup() {
     const store = useStore()
     const isMobile = computed(() => store.isMobile)
-    // console.log('isMobile', isMobile.value)
     return{
       isMobile
     }

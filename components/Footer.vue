@@ -73,11 +73,18 @@ export default {
     const view = ref(null)
 
     onMounted(() => {
-      getContainerWidth(view.value.clientWidth)
+      const resizeWidth = new ResizeObserver(entries => {
+        getContainerWidth(entries[0].contentRect)
+      })
+      resizeWidth.observe(view.value)
     })
 
-    const getContainerWidth = $_.debounce((val) => {
-      store.setWidth(val)
+    onUnmounted(() => {
+      resizeWidth.disconnect()
+    })
+
+    const getContainerWidth = $_.debounce((el) => {
+      store.setWidth(el.width)
     }, 300)
 
     const footerText = ref([
