@@ -100,12 +100,13 @@ div(
           '-translate-1/2',\
           'object-cover',\
         ])"
-        :src="isMobile ? '../assets/video/f_101_mo.mp4' : '../assets/video/f_101_pc.mp4'"
         preload="auto"
+        muted
         loop
         autoplay
         playsinline
       )
+        source(:src="isMobile ? '../assets/video/f_101_mo.mp4' : '../assets/video/f_101_pc.mp4'" type="video/mp4")
     div(
       :class="$tw([\
         '-bottom-1',\
@@ -113,7 +114,12 @@ div(
         'w-full',\
         'h-24',\
       ])"
-      style="backgroundImage: url('../assets/img/m2_bg_sp101.png'); background-repeat: repeat-x; background-position: 0px bottom; background-size: 130px;"
+      :style="{\
+        backgroundImage: `url('../assets/img/m2_bg_sp101.png')`,\
+        'background-repeat': 'repeat-x',\
+        'background-position': '0px bottom',\
+        'background-size': `${ isMobile ? 130 : 230 }px`,\
+      }"
     )
     div(
       :class="$tw([\
@@ -162,13 +168,10 @@ export default {
     const { $_ } = useNuxtApp()
     const isMobile = computed(() => store.isMobile)
     onMounted(() => {
-      const video = document.querySelector('video');
-      // console.log('video', video)
-      // video.play()
     })
     
     return{
-      isMobile
+      isMobile,
     }
   }
 }
