@@ -20,6 +20,8 @@
     "pug-plain-loader": "^1.1.0",
     "sass": "^1.53.0",
     "sass-loader": "^13.0.2",
-    "twind": "^0.16.17"
+    "swiper": "^8.3.1",
+    "twind": "^0.16.17",
+    "vue-awesome-swiper": "^5.0.1"
   }
 }
