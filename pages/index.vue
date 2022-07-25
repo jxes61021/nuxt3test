@@ -30,13 +30,13 @@ div(
   Feature
 </template>
 <script>
-import { ref } from 'vue'
+// import { ref } from 'vue'
 import useStore from '@/store'
-import Feature from '@/components/Feature.vue'
+// import Feature from '@/components/Feature.vue'
 export default {
-  components: {
-    Feature
-  },
+  // components: {
+  //   Feature
+  // },
   setup() {
     const store = useStore()
     const { $_ } = useNuxtApp()

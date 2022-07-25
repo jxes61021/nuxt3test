@@ -56,7 +56,6 @@
   img(src="@/assets/img/m2_btnmore.png")
 </template>
 <script>
-import { ref } from 'vue'
 import useStore from '@/store'
 export default {
   setup() {

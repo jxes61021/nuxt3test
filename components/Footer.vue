@@ -64,7 +64,6 @@
     ) ©2021 GOD PLAY GAME. All Rights Reserved.
 </template>
 <script>
-import { ref, onUnmounted, onMounted } from 'vue'
 import useStore from '@/store'
 export default {
   setup() {

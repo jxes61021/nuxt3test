@@ -55,7 +55,6 @@ div(
           div {{item}}
 </template>
 <script>
-import { ref, onMounted } from 'vue'
 import useStore from '@/store'
 import SwiperClass, { Pagination } from 'swiper'
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
