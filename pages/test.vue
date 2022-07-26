@@ -29,11 +29,14 @@ div(
   ) {{test}}
   div
     NuxtLink(to="/") backindex
+  div
+    button(@click="add") addstr
 </template>
 <script>
-// import { ref } from 'vue'
-// import { tw } from 'twind/shim'
 import useStore from '@/store'
+definePageMeta({
+  middleware: ["need-import-test"]
+})
 export default {
   setup() {
     const store = useStore()
@@ -57,10 +60,19 @@ export default {
     // const runtimeConfig = useRuntimeConfig()
     // console.log(runtimeConfig.privatetest)
     // console.log(runtimeConfig.public.publictest)
+    const num = ref(0)
+    const add = () => {
+      num.value++
+      // console.log('add', num.value)
+    }
+    watch(num, (val) => {
+      console.log('val', val)
+    })
     return{
       temp,
       test,
       status,
+      add,
       // tw,
     }
   }
