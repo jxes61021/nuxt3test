@@ -28,6 +28,8 @@ div(
   }"
 ) 
   Feature
+  div
+    NuxtLink(to="/test") backtest
 </template>
 <script>
 // import { ref } from 'vue'

@@ -30,10 +30,11 @@ div(
   div
     NuxtLink(to="/") backindex
   div
-    button(@click="add") addstr
+    button(@click="add") addstr : {{peopleCount + num}}
 </template>
 <script>
 import useStore from '@/store'
+import axios from "axios";
 definePageMeta({
   middleware: ["need-import-test"]
 })
@@ -68,10 +69,24 @@ export default {
     watch(num, (val) => {
       console.log('val', val)
     })
+    setTimeout(() => { num.value = num.value + 3}, 1000);
+    const peopleCount = ref(0);
+    axios.get("https://a1.godplay.app/Activity/gather/SignInCount", {
+      params: { ActivityId: 1 },
+    })
+    .then((res) => {
+      peopleCount.value = res.data.Data.TotalCount;
+      // console.log('peopleCount.value', peopleCount.value)
+    })
+    .catch((error) => {
+      console.log(error);
+    });
     return{
       temp,
       test,
       status,
+      num,
+      peopleCount,
       add,
       // tw,
     }

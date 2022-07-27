@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   buildModules: [
     '@pinia/nuxt',
   ],
+  // ssr: false,
   css: [
     'normalize.css/normalize.css'
   ],
