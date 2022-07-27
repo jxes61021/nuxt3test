@@ -5,6 +5,9 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
   ],
   // ssr: false,
+  build: {
+    transpile: ['swiper']
+  },
   css: [
     'normalize.css/normalize.css'
   ],
